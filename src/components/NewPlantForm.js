@@ -26,7 +26,7 @@ function NewPlantForm() {
     fetch("http://localhost:6001/plants", {
       method: "POST",
       headers: {
-        "Content-type": "application/json"
+        "Content-Type": "Application/JSON"
       },
       body: JSON.stringify(newPlant)
     })
