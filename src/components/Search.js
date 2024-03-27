@@ -11,13 +11,17 @@ function Search() {
     if (searchText === "") {
       fetch("http://localhost:6001/plants")
         .then(resp => resp.json())
-        .then(plants => {setPlantListing(plants)})
+        .then(plants => {
+          setPlantListing(plants);
+        })
         .catch(error => console.error("Error fetching plants:", error));
     } else {
-      const filteredBySearch = plantListing.filter(plant =>
+      const filteredPlants = plantListing.filter(plant =>
         plant.name.toLowerCase().includes(searchText)
       );
-      setPlantListing(filteredBySearch);
+      console.log("Searchtext:", searchText)
+      console.log("Returned Filtered Array:", filteredPlants)
+      setPlantListing(filteredPlants);
     }
   }
 
