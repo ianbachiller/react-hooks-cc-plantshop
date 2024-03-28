@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import PlantCard from "./PlantCard";
 import { PlantContext } from "./App";
 
-function PlantList() {
+function PlantList({handleDelete}) {
   const { filteredPlants } = useContext(PlantContext);
   const plantListOfCards = filteredPlants.map((plant) => (
     <PlantCard
@@ -10,6 +10,8 @@ function PlantList() {
       name={plant.name}
       price={plant.price}
       image={plant.image}
+      id={plant.id}
+      handleDelete={handleDelete}
     />
   ));
   return <ul className="cards">{plantListOfCards}</ul>;
