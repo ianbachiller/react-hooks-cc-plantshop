@@ -1,10 +1,8 @@
-// Search.js
 import React, { useContext } from "react";
 import { PlantContext } from "./App";
 
-function Search({ handleSearchChange }) {
-  const { search } = useContext(PlantContext);
-
+function Search() {
+  const { search, handleSearchChange } = useContext(PlantContext);
   return (
     <div className="searchbar">
       <label htmlFor="search">Search Plants:</label>
@@ -18,5 +16,4 @@ function Search({ handleSearchChange }) {
     </div>
   );
 }
-
 export default Search;

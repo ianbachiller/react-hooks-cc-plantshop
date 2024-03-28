@@ -1,8 +1,6 @@
-// App.js
 import React, { useEffect, useState, createContext } from "react";
 import Header from "./Header";
 import PlantPage from "./PlantPage";
-import PlantList from "./PlantList"
 
 export const PlantContext = createContext();
 
@@ -12,21 +10,32 @@ function App() {
 
   useEffect(() => {
     fetch("http://localhost:6001/plants")
-      .then(resp => resp.json())
-      .then(plants => setPlantListing(plants));
+      .then((resp) => resp.json())
+      .then((plants) => setPlantListing(plants));
   }, []);
 
   function handleSearchChange(e) {
     const searchText = e.target.value.toLowerCase();
-    console.log(searchText)
+    console.log(searchText);
     setSearch(searchText);
   }
-  const filteredPlants = plantListing.filter((plant => plant.name.toLowerCase().includes(search.toLowerCase())))
+
+  const filteredPlants = plantListing.filter((plant) =>
+    plant.name.toLowerCase().includes(search.toLowerCase())
+  );
   return (
-    <PlantContext.Provider value={{ plantListing, setPlantListing, search }}>
+    <PlantContext.Provider
+      value={{
+        plantListing,
+        setPlantListing,
+        search,
+        handleSearchChange,
+        filteredPlants,
+      }}
+    >
       <div className="app">
         <Header />
-        <PlantPage  handleSearchChange={handleSearchChange} filteredPlants={filteredPlants}/>
+        <PlantPage />
       </div>
     </PlantContext.Provider>
   );
