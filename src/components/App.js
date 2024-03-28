@@ -16,7 +16,6 @@ function App() {
 
   function handleSearchChange(e) {
     const searchText = e.target.value.toLowerCase();
-    console.log(searchText);
     setSearch(searchText);
   }
 

@@ -47,6 +47,24 @@
       "image": "https://live.staticflickr.com/2343/2180574274_3c7ec9d0ca_z.jpg",
       "price": "100",
       "id": 8
+    },
+    {
+      "name": "Rose",
+      "image": "https://images.fineartamerica.com/images-medium-large/early-morning-rose-living-color-photography-lorraine-lynch.jpg",
+      "price": "99.99",
+      "id": 9
+    },
+    {
+      "name": "Fake Plant",
+      "image": "https://lasercutwraps.com/cdn/shop/products/2PcsFakePlantsforBathroomHomeOfficeDecor_SmallArtificialFauxGreeneryforHouseDecorations_PottedPlants_3.jpg?v=1644821537",
+      "price": "9.99",
+      "id": 10
+    },
+    {
+      "name": "Treebeard",
+      "image": "https://tolkiengateway.net/w/images/thumb/0/08/The_Lord_of_the_Rings_-_The_Two_Towers_-_Treebeard.jpeg/199px-The_Lord_of_the_Rings_-_The_Two_Towers_-_Treebeard.jpeg",
+      "price": "9.99",
+      "id": 12
     }
   ]
 }

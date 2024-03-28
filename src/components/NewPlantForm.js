@@ -28,6 +28,9 @@ function NewPlantForm() {
       .then((resp) => resp.json())
       .then((newP) => {
         setPlantListing((prevPlantListing) => [...prevPlantListing, newP]);
+        setName("");
+        setImage("");
+        setPrice("");
       });
   }
   return (
